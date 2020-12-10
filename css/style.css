@@ -124,7 +124,7 @@ main {
   /* padding: var(--gutter); */
   width: 100%;
   /* height: 100%; */
-  height: calc(100vh - var(--header-height));
+  height: calc(100vh - var(--header-height) * 2);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -214,7 +214,7 @@ main {
   width: 800px;
   /* background-color: var(--bg-color); */
   background-color: var(--minion-blue-2);
-  height: 400px;
+  height: 300px;
   border-radius: 0 0 12px 12px;
   padding: 12px;
   display: flex;
@@ -224,11 +224,40 @@ main {
 
 .output {
   width: 100%;
-  height: 100%;
+  /* height: 300px; */
   /* background-color: white; */
   background-color: var(--primary-color);
-  height: calc(400px - (12px * 4));
+  height: calc(300px - (12px * 4));
   border-radius: 12px;
   padding: 24px;
   font-size: 1.1rem;
+  overflow: auto;
+}
+
+footer {
+  height: 100px;
+  width: 100%;
+  background-color: var(--bg-color);
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  color: white;
+  margin: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+footer .about {
+  font-size: 1.3rem;
+}
+footer .by {
+  font-size: 0.9rem;
+}
+footer a {
+  color: #22d3ee;
+  /* text-decoration: none; */
+  /* line-height: 0; */
+  margin: 0;
 }
