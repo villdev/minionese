@@ -1,12 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Banana Translate</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <script src="./main.js"></script>
-</body>
+    <link rel="stylesheet" href="./css/normalize.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="title">minionese</div>
+    </header>
+    <main>
+      <div class="minion">
+        <img src="./images/minion.svg" alt="" />
+        <div class="eye"><div class="eye-ball"></div></div>
+        <!-- <div class="eye-ball"></div> -->
+      </div>
+      <div class="main-content">
+        <div class="input-area">
+          <form>
+            <input
+              type="text"
+              name="input"
+              placeholder="Enter text to translate..."
+            />
+            <button type="submit">Translate</button>
+          </form>
+        </div>
+        <div class="output-area">
+          <div class="output">
+            <p>
+              Minionese, or often referred as Minion Language or Banana
+              Language, is a polyglot language, which borrows words and
+              grammatical rules from many different languages (French, English,
+              Spanish, Hindi, Korean etc.). Minionese contains some elements of
+              English, with words like "Banana". Minions are, as has been shown
+              many times, particularly obsessed with food.
+            </p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <script src="./js/main.js"></script>
+  </body>
 </html>
