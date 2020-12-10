@@ -2,6 +2,8 @@ const serverUrl = "https://api.funtranslations.com/translate/minion.json?text=";
 const input = document.querySelector("input");
 const output = document.querySelector(".output");
 const form = document.querySelector("form");
+const loader = document.querySelector(".loader-bcg");
+const btn = document.querySelector("button");
 
 form.addEventListener("submit", submitHandler);
 
@@ -9,10 +11,14 @@ function submitHandler(e) {
   e.preventDefault();
   let translateText = input.value;
   let endpoint = serverUrl + translateText;
+  loader.style.display = "flex";
+  btn.style.display = "none";
   fetch(endpoint)
     .then((res) => res.json())
     .then((json) => {
       const translatedText = json.contents.translated;
+      loader.style.display = "none";
+      btn.style.display = "block";
       output.innerText = translatedText;
     })
     .catch((e) => console.log("error occured: ", e));
