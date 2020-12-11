@@ -57,7 +57,6 @@ mouseMoveArea.addEventListener("mousemove", (e) => {
   //   const translateValue = `translateX(${x}px)`;
   const translateValue = `translate(${x}px,${y}px)`;
   eye.style.transform = translateValue;
-  //   console.log(lerp(0, 16, x));
 });
 
 function lerp(v0, v1, t) {
