@@ -19,7 +19,10 @@ function submitHandler(e) {
       const translatedText = json.contents.translated;
       loader.style.display = "none";
       btn.style.display = "block";
-      output.innerText = translatedText;
+      const title = `<div class="output-title">Translation <span class="translate-text"> (${translateText})</span>:</div>`;
+      const innerH = `${title}<div class="translation">&#10132; ${translatedText}</div>`;
+      // output.innerText = translatedText;
+      output.innerHTML = innerH;
     })
     .catch((e) => console.log("error occured: ", e));
 }

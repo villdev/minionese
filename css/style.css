@@ -234,6 +234,21 @@ main {
   overflow: auto;
 }
 
+.output-title {
+  border-bottom: 2px solid rgba(32, 31, 19, 0.267);
+  /* color: #4e494a; */
+  /* font-size: 0.9rem; */
+  font-weight: bold;
+}
+.translate-text {
+  font-weight: 500;
+  color: rgba(29, 29, 29, 0.719);
+}
+.translation {
+  /* color: whi; */
+  font-size: 1.1rem;
+}
+
 footer {
   height: 100px;
   width: 100%;
