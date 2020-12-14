@@ -14,7 +14,10 @@ function submitHandler(e) {
   loader.style.display = "flex";
   btn.style.display = "none";
   fetch(endpoint)
-    .then((res) => res.json())
+    .then((res) => {
+      if (!res.ok) throw Error(res.statusText);
+      return res.json();
+    })
     .then((json) => {
       const translatedText = json.contents.translated;
       loader.style.display = "none";
